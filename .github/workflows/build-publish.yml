@@ -12,9 +12,9 @@ jobs:
     build-publish-python:
         runs-on: ubuntu-latest
         env:
-          DOCKER_REPO: 'vigneshs-docker'
+          DOCKER_REPO: 'roja-docker'
           IMAGE_NAME: 'my-very-cool-image:${{ github.run_number }}'
-          JF_URL: https://${{ secrets.JF_URL }}/
+          JF_URL: https://tse.jfrog.io/
         steps:
             - name: Any Name Bash Test Step
               shell: bash
@@ -25,11 +25,8 @@ jobs:
               uses: jfrog/setup-jfrog-cli@v4
               id: setup-cli
               env:
-                JF_URL: https://${{ secrets.JF_URL }}/
-                JF_PROJECT: 'umac'
-              with:
-                  oidc-provider-name: vigneshs-github
-                  oidc-audience: jfrog-github-oidc
+                JF_URL: https://tse.jfrog.io/
+                JF_PROJECT: 'roja'
 
             - name: Checkout the repository
               uses: actions/checkout@v4
