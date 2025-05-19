@@ -20,7 +20,7 @@ jobs:
               shell: bash
               run: |
                 printenv
-            # Use the specific setup-cli branch
+            # Use the specific setup-cli
             - name: Setup JFrog CLI
               uses: jfrog/setup-jfrog-cli@v4
               id: setup-cli
