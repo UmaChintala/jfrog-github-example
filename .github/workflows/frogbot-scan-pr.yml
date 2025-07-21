@@ -34,9 +34,6 @@ jobs:
       #  2. Some projects require creating a frogbot-config.yml file. Read more about it here - https://github.com/jfrog/frogbot/blob/master/docs/frogbot-config.md
 
       - uses: jfrog/frogbot@v2
-        with:
-          oidc-provider-name: vigneshs-github
-          oidc-audience: jfrog-github-oidc
         env:
           JFROG_CLI_LOG_LEVEL: DEBUG
           # [Mandatory if the two conditions below are met]
